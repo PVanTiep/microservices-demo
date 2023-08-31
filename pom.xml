@@ -14,21 +14,31 @@
 	<name>microservice-demo</name>
 	<description>microservice demo project for Spring Boot</description>
     <modules>
-        <module>twitter-to-kafka-service</module>
-    </modules>
+        <module>data-to-kafka-service</module>
+	</modules>
     <packaging>pom</packaging>
 	<properties>
+		<project.version>0.0.1-SNAPSHOT</project.version>
 		<java.version>11</java.version>
 		<spring-boot.version>2.7.15</spring-boot.version>
 		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
 		<twitter4j.version>4.0.7</twitter4j.version>
 		<lombok.version>1.18.16</lombok.version>
+		<spring-cloud.version>2021.0.6</spring-cloud.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
+
+<!--			Spring dependences-->
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter</artifactId>
+				<version>${spring-boot.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
 				<version>${spring-boot.version}</version>
 			</dependency>
 
@@ -57,6 +67,16 @@
 				<version>${lombok.version}</version>
 				<scope>provided</scope>
 			</dependency>
+
+<!--			<dependency>-->
+<!--				<groupId>org.springframework.cloud</groupId>-->
+<!--				<artifactId>spring-cloud-dependencies</artifactId>-->
+<!--				<version>${spring-cloud.version}</version>-->
+<!--				<type>pom</type>-->
+<!--				<scope>import</scope>-->
+<!--			</dependency>-->
+
+
 		</dependencies>
 	</dependencyManagement>
 
